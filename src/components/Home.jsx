@@ -2,9 +2,10 @@ import {useState,Suspense} from 'react';
 
 
 import {Outlet} from 'react-router-dom';
-import SuspenseLoader from '../components/common/SuspenseLoader';
+
 import {Box} from '@mui/material';
 import Navbar from './Navbar';
+import Loading from '../extras/Loading';
 
 const Home = () => {
     const[openDrawer,setOpenDrawer]=useState(true);
@@ -15,7 +16,7 @@ const Home = () => {
     <>
     <Navbar toggleDrawer={toggleDrawer}/>
     <Box>
-      <Suspense fallback={<SuspenseLoader />}>
+      <Suspense fallback={<Loading />}>
         <Outlet context={openDrawer}/>
       </Suspense>
     </Box>

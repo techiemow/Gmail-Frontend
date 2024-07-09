@@ -1,5 +1,4 @@
 
-export const emptyProfilePic='https://ssl.gstatic.com/ui/v1/icons/mail/profile_mask2.png';
 
 export const EMPTY_TABS={
     inbox:{
